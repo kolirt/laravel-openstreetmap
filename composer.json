@@ -1,0 +1,33 @@
+{
+  "name": "kolirt/laravel-openstreetmap",
+  "description": "Package for openstreetmap.org",
+  "keywords": ["laravel", "openstreetmap", "map"],
+  "license": "MIT",
+  "version": "1.0.3",
+  "authors": [
+    {
+      "name": "kolirt"
+    }
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "> 6.0.0"
+  },
+  "autoload": {
+    "files": [
+      "src/helpers.php"
+    ],
+    "psr-4": {
+      "Kolirt\\Openstreetmap\\": "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Kolirt\\Openstreetmap\\ServiceProvider"
+      ],
+      "aliases": {
+        "Openstreetmap": "Kolirt\\Openstreetmap\\Facade\\Openstreetmap"
+      }
+    }
+  }
+}
